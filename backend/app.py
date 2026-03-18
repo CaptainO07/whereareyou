@@ -30,7 +30,7 @@ def check():
         print(email)
         print(url)
         print(screenshot)
-    return render_template('welcome.html')
+    return render_template('check.html')
 
 @app.route("/submiturl",methods=["GET","POST"])
 def submiturl():
