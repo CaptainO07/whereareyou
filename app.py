@@ -1,7 +1,7 @@
 from flask import Flask, jsonify,render_template,redirect,url_for,request,session, send_from_directory, session 
 from models import *
 from flask_sqlalchemy import SQLAlchemy
-from dotenv import load_env
+
 import os
 from werkzeug.utils import secure_filename
 app=Flask(__name__)
@@ -59,6 +59,7 @@ def see_url():
         return redirect(url_for('login'))
     if request.method=="GET":
         info=Data.query.all()
+
         return jsonify(info)
 @app.route("/see_url")
 def random():
